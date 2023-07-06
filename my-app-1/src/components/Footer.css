@@ -1,0 +1,29 @@
+.footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background: linear-gradient(to bottom, #ffd700, #cda800);
+  color: white;
+  text-align: left;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-top: 15%;
+  width: 100%;
+}
+
+.column {
+  display: inline;
+  margin-right: 20px;
+}
+
+.column h4.follow {
+  margin-left: 11px;
+}
+.social-icon {
+  display: inline;
+
+  justify-content: start;
+  margin: 5px;
+  color: white;
+  font-size: 20px;
+}

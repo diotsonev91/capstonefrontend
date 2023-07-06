@@ -1,0 +1,49 @@
+/* About.css */
+.about-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+
+.text-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-stack {
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.image-stack__item--top {
+  grid-column: 1 / span 5;
+  grid-row: 1;
+  padding-top: 20%;
+  z-index: 1;
+}
+
+.image-stack__item--bottom {
+  grid-column: 4 / -1;
+  grid-row: 1;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+  display: block;
+}

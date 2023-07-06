@@ -1,7 +1,8 @@
 import React from "react";
-
+import CallToAction from "./CallToAction";
+import "./Header.css";
 const Header = () => {
-  return <header>{/* Header content goes here */}</header>;
+  return <header></header>;
 };
 
 export default Header;

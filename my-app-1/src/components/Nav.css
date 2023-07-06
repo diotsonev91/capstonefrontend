@@ -1,0 +1,55 @@
+/* Nav.css */
+.navigation {
+  /* Your existing styles for the navigation component */
+  background: linear-gradient(to right, #ffd700, #e0ce68, #dab513);
+
+  /* Add the following styles to align the list items horizontally */
+  display: flex;
+  padding-bottom: 15%;
+  margin-top: 5%;
+}
+
+.navigation ul {
+  /* Add the following styles to remove the default list styles and align the list items horizontally */
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  align-items: flex-end;
+}
+
+.navigation li {
+  /* Add spacing between the list items */
+  margin-top: 2.5%;
+  flex: 1;
+  margin-left: 2.5%;
+  text-align: center;
+}
+
+.navigation a {
+  /* Add any additional styles for the links if needed
+   */
+}
+
+.navigation img {
+  flex: 1;
+  margin-right: 2.5%;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 2px;
+  background: linear-gradient(to right, #4caf50, #6abe75);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

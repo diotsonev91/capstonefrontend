@@ -1,21 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import "./Nav.css";
 
 const Nav = () => {
   return (
-    <nav>
+    <nav className="navigation">
       <img src="path_to_little_lemon_logo.png" alt="Little Lemon Logo" />
       <ul>
-        <li>
-          <a href="/">Home</a>
+        <li className="button">
+          <Link to="/">Home</Link>
         </li>
-        <li>
-          <a href="/about">About</a>
+        <li className="button">
+          <Link to="/about">About</Link>
         </li>
-        <li>
-          <a href="/services">Services</a>
+        <li className="button">
+          <Link to="/specials">Menu</Link>
         </li>
-        <li>
-          <a href="/contact">Contact</a>
+        <li className="button">
+          <Link to="/contact">Reservations</Link>
+        </li>
+        <li className="button">
+          <Link to="/order-online">Order online</Link>
+        </li>
+        <li className="button">
+          <Link to="/login">Login</Link>
         </li>
       </ul>
     </nav>
