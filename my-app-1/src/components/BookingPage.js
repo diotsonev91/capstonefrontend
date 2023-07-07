@@ -1,13 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchAPI } from "../utilities/dataAPIs";
+import Logo from "../assets/little-lemo-logo.png"
+import "./styles/Booking.css"; // Import the CSS file for styling
 
 const BookingPage = ({ handleSubmit, submitting }) => {
   const [date, setDate] = useState(new Date());
   const [time, setTime] = useState("17:00");
   const [guests, setGuests] = useState(1);
   const [occasion, setOccasion] = useState("Birthday");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [availableTimes, setAvailableTimes] = useState([]);
+  const [nameError, setNameError] = useState(false);
+  const [phoneNumberError, setPhoneNumberError] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -30,6 +36,13 @@ const BookingPage = ({ handleSubmit, submitting }) => {
       return;
     }
 
+    if (!name || !phoneNumber) {
+      // Validate name and phone number fields
+      setNameError(!name);
+      setPhoneNumberError(!phoneNumber);
+      return;
+    }
+
     handleSubmit({ date, time, guests, occasion });
   };
 
@@ -48,8 +61,10 @@ const BookingPage = ({ handleSubmit, submitting }) => {
   };
 
   return (
+    <div className="grid-book">
+      <div>
     <form
-      style={{ display: "grid", maxWidth: "200px", gap: "20px" }}
+      className="booking-form" // Apply the CSS class for styling
       onSubmit={handleFormSubmit}
     >
       <label htmlFor="res-date">Choose date</label>
@@ -84,6 +99,34 @@ const BookingPage = ({ handleSubmit, submitting }) => {
         onChange={(e) => setGuests(e.target.value)}
       />
 
+      <label htmlFor="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+          setNameError(false); // Reset the name error when the input changes
+        }}
+        className={nameError ? "error" : ""} // Apply the error class if nameError is true
+      />
+      {nameError && <span className="error-message">Name is required</span>}
+
+      <label htmlFor="phone">Telephone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        value={phoneNumber}
+        onChange={(e) => {
+          setPhoneNumber(e.target.value);
+          setPhoneNumberError(false); // Reset the phone number error when the input changes
+        }}
+        className={phoneNumberError ? "error" : ""} // Apply the error class if phoneNumberError is true
+      />
+      {phoneNumberError && (
+        <span className="error-message">Phone number is required</span>
+      )}
+
       <label htmlFor="occasion">Occasion</label>
       <select
         id="occasion"
@@ -96,10 +139,15 @@ const BookingPage = ({ handleSubmit, submitting }) => {
 
       <input
         type="submit"
-        value={submitting ? "Submitting..." : "Make Your reservation"}
+        value={submitting ? "Submitting..." : "Make Your Reservation"}
         disabled={submitting}
       />
     </form>
+    </div>
+    <div>
+      <img src={Logo}/>
+    </div>
+    </div>
   );
 };
 
