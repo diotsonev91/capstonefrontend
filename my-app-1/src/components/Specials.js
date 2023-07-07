@@ -1,6 +1,8 @@
 import React from "react";
-import "./Specials.css";
-
+import "./styles/Specials.css";
+import Special1 from "../assets/brucheti.jpeg"
+import Special2 from "../assets/greek-salad.jpeg"
+import Special3 from "../assets/kuftq.jpg"
 const Specials = () => {
   return (
     <div className="specials">
@@ -10,26 +12,26 @@ const Specials = () => {
       </div>
       <div className="specials-container">
         <div className="specials-column">
-          <img src="path_to_image1.png" alt="Special 1" />
+          <img src={Special1}  alt="Special 1" />
           <div className="special-column-content">
             <h5>special name</h5>
-            <p>special price</p>
+            <p>$15</p>
           </div>
           <p>Special 1 description</p>
         </div>
         <div className="specials-column">
-          <img src="path_to_image2.png" alt="Special 2" />
+          <img src={Special2} alt="Special 2" />
           <div className="special-column-content">
             <h5>special name</h5>
-            <p>special price</p>
+            <p>$15</p>
           </div>
           <p>Special 1 description</p>
         </div>
         <div className="specials-column">
-          <img src="path_to_image3.png" alt="Special 3" />
+          <img src={Special3}  alt="Special 3" />
           <div className="special-column-content">
             <h5>special name</h5>
-            <p>special price</p>
+            <p>$15</p>
           </div>
           <p>Special 1 description</p>
         </div>

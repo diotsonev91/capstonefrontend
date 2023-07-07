@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "./CallToAction.css";
-
+import "./styles/CallToAction.css";
+import Logo from "../assets/little-lemo-logo.png"
 const CallToAction = () => {
   const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ const CallToAction = () => {
         </button>
       </div>
       <div>
-        <img src="path_to_little_lemon_logo.png" alt="Little Lemon Big Logo" />
+        <img src={Logo}  alt="Little Lemon Big Logo" />
       </div>
     </header>
   );

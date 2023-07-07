@@ -1,6 +1,8 @@
 // About.js
 import React from "react";
-import "./About.css";
+import "./styles/About.css";
+import Mario1 from "../assets/mario-1.png"
+import Mario2 from "../assets/mario.jpeg"
 
 const About = () => {
   return (
@@ -17,13 +19,13 @@ const About = () => {
       <div className="image-stack">
         <div className="image-stack__item image-stack__item--top">
           <img
-            src="https://picsum.photos/200/200?image=11"
+            src={Mario2}
             alt="Picsum Photo"
           />
         </div>
         <div className="image-stack__item image-stack__item--bottom">
           <img
-            src="https://picsum.photos/200/200?image=12"
+            src={Mario1}
             alt="Picsum Photo"
           />
         </div>

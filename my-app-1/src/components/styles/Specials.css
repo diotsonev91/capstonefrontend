@@ -30,7 +30,7 @@
 
 .specials-column img {
   width: 100%;
-  height: auto;
+  max-height: 350px;
   margin-bottom: 10px; /* Add margin-bottom to create space between image and text */
 }
 
@@ -42,6 +42,7 @@
 .special-column-content h5 {
   flex: 1;
   font-size: 18px;
+  margin-left: 5px;
 
   margin-bottom: 5px;
 }

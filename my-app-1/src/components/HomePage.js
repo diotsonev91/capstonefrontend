@@ -2,7 +2,7 @@ import React from "react";
 import About from "./About";
 import CustomersSay from "./CustomersSay";
 import CallToAction from "./CallToAction";
-import "./Homepage.css";
+import "./styles/Homepage.css";
 
 const Homepage = () => {
   return (

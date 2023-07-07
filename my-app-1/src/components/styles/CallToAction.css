@@ -1,16 +1,25 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.header > div {
-  flex: 1;
+  align-items: flex-end; /* Align items vertically to the bottom */
 }
 
 .header > div:first-child {
-  margin-right: 10px; /* Adjust the margin as needed */
+  flex:1;
+  text-align: left; /* Align content to the left */
 }
+
+.header > div:last-child {
+
+  align-items: right; /* Align content to the right */
+  margin-left: 45%;
+}
+
+.header > div:last-child img {
+  max-width: 250px; /* Adjust the maximum width to your desired size */
+  height: auto;
+}
+
 
 .header h1,
 .header h2,

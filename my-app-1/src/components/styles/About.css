@@ -1,5 +1,6 @@
 /* About.css */
 .about-container {
+  margin-top: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
@@ -24,7 +25,7 @@
 }
 
 .image-stack__item--bottom {
-  grid-column: 4 / -1;
+  grid-column: 4 / -5;
   grid-row: 1;
 }
 

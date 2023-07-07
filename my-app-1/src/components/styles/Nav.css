@@ -35,6 +35,8 @@
 .navigation img {
   flex: 1;
   margin-right: 2.5%;
+  max-width: 100px; /* Adjust the maximum width to your desired size */
+  height: auto;
 }
 
 .button {
